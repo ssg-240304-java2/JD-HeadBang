@@ -13,8 +13,8 @@ public class CartController {
         this.cartService = cartService;
     }
 
-    public void buy() {
-        String inputAlbumIds = InputUtils.nextLine("구매할 앨범 아이디를 입력해 주세요");
+    public void add() {
+        String inputAlbumIds = InputUtils.nextLine("담을 앨범 아이디를 입력해 주세요");
         List<Long> albumIds = Arrays.stream(inputAlbumIds.split(","))
                 .map(String::trim) /* ["1", "2", "3"]*/
                 .map(this::parse) /* [1, 2, 3]*/
@@ -26,6 +26,14 @@ public class CartController {
 //        Stream[1,2,3,4,5,6]
 //         List[1,2,3,4,5,6]
         cartService.put(albumIds);
+    }
+
+    public void showCart() {
+        cartService.showCart();
+    }
+
+    public void update() {
+        cartService.update();
     }
 
     private Long parse(String id) {

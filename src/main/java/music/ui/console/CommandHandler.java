@@ -21,8 +21,14 @@ public class CommandHandler {
             case SHOW_ALBUM -> {
                 // TODO: 컨트롤러 호출
             }
-            case BUY_ALBUM -> {
-                cartController.buy();
+            case ADD_ALBUM -> {
+                cartController.add();
+            }
+            case SHOW_CART -> {
+                cartController.showCart();
+            }
+            case UPDATE_CART -> {
+                cartController.update();
             }
             case EXIT -> {
                 System.out.println("종료합니다.");

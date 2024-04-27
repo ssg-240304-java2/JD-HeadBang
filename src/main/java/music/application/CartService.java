@@ -15,4 +15,11 @@ public class CartService {
         cart.put(List.of());
     }
 
+    public void showCart() {
+        cart.show();
+    }
+
+    public void update() {
+        cart.update();
+    }
 }

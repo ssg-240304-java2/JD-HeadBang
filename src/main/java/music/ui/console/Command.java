@@ -5,7 +5,10 @@ public enum Command {
     SEARCH_ALBUM("2", "앨범 검색"),
     SEARCH_SONG("3", "노래 검색"),
     SEARCH_SINGER("4", "가수 검색"),
-    BUY_ALBUM("5", "구매하기"),
+    ADD_ALBUM("5", "장바구니 담기"),
+    SHOW_CART("6", "장바구니 보기"),
+    UPDATE_CART("7", "앨범 개수 변경"),
+    BUY_ALBUM("8", "구매하기"),
     EXIT("0", "종료하기")
     ;
 
