@@ -11,15 +11,18 @@ public class AlbumDTO {
     protected LocalDate releaseDate;
     protected String collectionId;
     protected List<TrackDTO> tracks;
+    private int purchaseAmount;
 
     public AlbumDTO(String artistName, String collectionName, Double collectionPrice, String releaseDate,
-                    String collectionId, List<TrackDTO> tracks) {
+                    String collectionId, List<TrackDTO> tracks, int purchaseAmount) {
+
         this.artistName = artistName;
         this.collectionName = collectionName;
         this.collectionPrice = collectionPrice;
         this.releaseDate = LocalDate.parse(releaseDate);
         this.collectionId = collectionId;
         this.tracks = tracks;
+        this.purchaseAmount = purchaseAmount;
     }
 
     // Getters
